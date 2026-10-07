@@ -1,15 +1,15 @@
 # Package versions — last 3 releases
 
-Versions of **216 packages** across **3 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = Backstage 1.56.0-next.1, RHDH 2.1 = Backstage 1.54.7, RHDH 1.10 = Backstage 1.49.4.
+Versions of **216 packages** across **3 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = Backstage 1.56.0-next.2, RHDH 2.1 = Backstage 1.54.7, RHDH 1.10 = Backstage 1.49.4.
 
 | Package | next | 2.1 | 1.10 |
 | --- | --- | --- | --- |
 | `@backstage/app-defaults` | 1.7.13-next.0 | 1.7.11 | 1.7.6 |
 | `@backstage/backend-app-api` | 1.8.0-next.1 | 1.7.3 | 1.6.0 |
-| `@backstage/backend-defaults` | 0.18.1-next.1 | 0.17.8 | 0.16.0 |
+| `@backstage/backend-defaults` | 0.18.1-next.2 | 0.17.8 | 0.16.0 |
 | `@backstage/backend-dev-utils` | 0.1.7 | 0.1.7 | 0.1.7 |
 | `@backstage/backend-dynamic-feature-service` | 0.8.8-next.1 | 0.8.6 | 0.8.0 |
-| `@backstage/backend-openapi-utils` | 0.7.3-next.1 | 0.7.1 | 0.6.7 |
+| `@backstage/backend-openapi-utils` | 0.7.3-next.2 | 0.7.1 | 0.6.7 |
 | `@backstage/backend-plugin-api` | 1.11.0-next.1 | 1.10.0 | 1.8.0 |
 | `@backstage/backend-test-utils` | 1.11.8-next.1 | 1.11.6 | 1.11.1 |
 | `@backstage/catalog-client` | 1.16.3-next.0 | 1.16.1 | 1.14.0 |
@@ -28,21 +28,21 @@ Versions of **216 packages** across **3 RHDH releases** — columns ordered newe
 | `@backstage/cli-module-maintenance` | 0.1.6-next.0 | 0.1.4 | 0.1.0 |
 | `@backstage/cli-module-migrate` | 0.2.2-next.1 | 0.2.1 | 0.1.0 |
 | `@backstage/cli-module-new` | 0.1.8-next.1 | 0.1.6 | 0.1.1 |
-| `@backstage/cli-module-package-manager-yarn` | 0.1.3-next.1 |  |  |
+| `@backstage/cli-module-package-manager-yarn` | 0.1.3-next.2 |  |  |
 | `@backstage/cli-module-scaffolder` | 0.2.0-next.0 |  |  |
 | `@backstage/cli-module-search` | 0.2.0-next.0 |  |  |
 | `@backstage/cli-module-test-jest` | 0.1.7-next.0 | 0.1.5 | 0.1.0 |
 | `@backstage/cli-module-translations` | 0.1.5-next.0 | 0.1.4 | 0.1.0 |
-| `@backstage/cli-node` | 0.3.5-next.0 | 0.3.4 | 0.3.0 |
+| `@backstage/cli-node` | 0.3.5-next.1 | 0.3.4 | 0.3.0 |
 | `@backstage/codemods` |  |  | 0.1.55 |
 | `@backstage/config` | 1.3.10-next.0 | 1.3.8 | 1.3.6 |
 | `@backstage/config-loader` | 1.11.4-next.0 | 1.11.2 | 1.10.9 |
 | `@backstage/connections` | 0.4.1-next.0 | 0.3.0 |  |
 | `@backstage/core-app-api` | 1.20.6-next.0 | 1.20.4 | 1.19.6 |
 | `@backstage/core-compat-api` | 0.5.16-next.0 | 0.5.14 | 0.5.9 |
-| `@backstage/core-components` | 0.18.15-next.1 | 0.18.13 | 0.18.8 |
+| `@backstage/core-components` | 0.18.15-next.2 | 0.18.13 | 0.18.8 |
 | `@backstage/core-plugin-api` | 1.12.11-next.0 | 1.12.9 | 1.12.4 |
-| `@backstage/create-app` | 0.9.3-next.1 | 0.9.1 | 0.8.1 |
+| `@backstage/create-app` | 0.9.3-next.2 | 0.9.1 | 0.8.1 |
 | `@backstage/dev-utils` | 1.1.28-next.0 | 1.1.26 | 1.1.21 |
 | `@backstage/e2e-test-utils` | 0.1.2 | 0.1.2 | 0.1.2 |
 | `@backstage/errors` | 1.3.2-next.0 | 1.3.1 | 1.2.7 |
@@ -54,14 +54,14 @@ Versions of **216 packages** across **3 RHDH releases** — columns ordered newe
 | `@backstage/frontend-dynamic-feature-loader` | 0.1.17-next.0 | 0.1.15 | 0.1.10 |
 | `@backstage/frontend-plugin-api` | 0.18.2-next.0 | 0.18.0 | 0.15.1 |
 | `@backstage/frontend-test-utils` | 0.6.5-next.0 | 0.6.3 | 0.5.1 |
-| `@backstage/integration` | 2.1.3-next.0 | 2.1.1 | 2.0.0 |
+| `@backstage/integration` | 2.1.3-next.1 | 2.1.1 | 2.0.0 |
 | `@backstage/integration-aws-node` | 0.2.3-next.0 | 0.2.1 | 0.1.20 |
 | `@backstage/integration-react` | 1.2.23-next.0 | 1.2.21 | 1.2.16 |
 | `@backstage/module-federation-common` | 0.1.6-next.0 | 0.1.4 | 0.1.2 |
 | `@backstage/plugin-api-docs` | 0.14.6-next.0 | 0.14.4 | 0.13.5 |
 | `@backstage/plugin-api-docs-module-protoc-gen-doc` | 0.1.11 | 0.1.11 | 0.1.11 |
 | `@backstage/plugin-app` | 0.5.4-next.0 | 0.5.2 | 0.4.2 |
-| `@backstage/plugin-app-backend` | 0.5.19-next.1 | 0.5.17 | 0.5.12 |
+| `@backstage/plugin-app-backend` | 0.5.19-next.2 | 0.5.17 | 0.5.12 |
 | `@backstage/plugin-app-module-user-settings` | 0.1.3-next.0 | 0.1.1 |  |
 | `@backstage/plugin-app-node` | 0.1.50-next.1 | 0.1.48 | 0.1.43 |
 | `@backstage/plugin-app-react` | 0.2.8-next.0 | 0.2.6 | 0.2.1 |
@@ -91,9 +91,9 @@ Versions of **216 packages** across **3 RHDH releases** — columns ordered newe
 | `@backstage/plugin-auth-backend-module-vmware-cloud-provider` | 0.5.19-next.1 | 0.5.17 | 0.5.12 |
 | `@backstage/plugin-auth-node` | 0.7.7-next.1 | 0.7.5 | 0.6.14 |
 | `@backstage/plugin-auth-react` | 0.1.32-next.0 | 0.1.30 | 0.1.25 |
-| `@backstage/plugin-bitbucket-cloud-common` | 0.3.14-next.0 | 0.3.12 | 0.3.8 |
-| `@backstage/plugin-catalog` | 2.0.10-next.1 | 2.0.8 | 2.0.1 |
-| `@backstage/plugin-catalog-backend` | 4.0.1-next.1 | 3.9.1 | 3.5.0 |
+| `@backstage/plugin-bitbucket-cloud-common` | 0.3.14-next.1 | 0.3.12 | 0.3.8 |
+| `@backstage/plugin-catalog` | 2.0.10-next.2 | 2.0.8 | 2.0.1 |
+| `@backstage/plugin-catalog-backend` | 4.0.1-next.2 | 3.9.1 | 3.5.0 |
 | `@backstage/plugin-catalog-backend-module-ai-model` | 0.1.5-next.1 | 0.1.3 |  |
 | `@backstage/plugin-catalog-backend-module-aws` | 0.4.29-next.1 | 0.4.27 | 0.4.21 |
 | `@backstage/plugin-catalog-backend-module-azure` | 0.3.23-next.1 | 0.3.21 | 0.3.15 |
@@ -102,7 +102,7 @@ Versions of **216 packages** across **3 RHDH releases** — columns ordered newe
 | `@backstage/plugin-catalog-backend-module-bitbucket-server` | 0.5.16-next.1 | 0.5.14 | 0.5.9 |
 | `@backstage/plugin-catalog-backend-module-gcp` | 0.3.24-next.1 | 0.3.22 | 0.3.17 |
 | `@backstage/plugin-catalog-backend-module-gerrit` | 0.3.19-next.1 | 0.3.17 | 0.3.12 |
-| `@backstage/plugin-catalog-backend-module-gitea` | 0.1.17-next.1 | 0.1.15 | 0.1.10 |
+| `@backstage/plugin-catalog-backend-module-gitea` | 0.1.17-next.2 | 0.1.15 | 0.1.10 |
 | `@backstage/plugin-catalog-backend-module-github` | 0.14.1-next.1 | 0.13.5 | 0.13.0 |
 | `@backstage/plugin-catalog-backend-module-github-org` | 0.3.27-next.1 | 0.3.25 | 0.3.20 |
 | `@backstage/plugin-catalog-backend-module-gitlab` | 0.8.9-next.1 | 0.8.7 | 0.8.1 |
@@ -120,7 +120,7 @@ Versions of **216 packages** across **3 RHDH releases** — columns ordered newe
 | `@backstage/plugin-catalog-graph` | 0.6.9-next.0 | 0.6.7 | 0.6.0 |
 | `@backstage/plugin-catalog-import` | 0.13.19-next.0 | 0.13.17 | 0.13.11 |
 | `@backstage/plugin-catalog-node` | 2.2.6-next.1 | 2.2.4 | 2.1.0 |
-| `@backstage/plugin-catalog-react` | 3.2.4-next.0 | 3.2.2 | 2.1.1 |
+| `@backstage/plugin-catalog-react` | 3.2.4-next.1 | 3.2.2 | 2.1.1 |
 | `@backstage/plugin-catalog-unprocessed-entities` | 0.2.36-next.0 | 0.2.34 | 0.2.28 |
 | `@backstage/plugin-catalog-unprocessed-entities-common` | 0.0.18-next.0 | 0.0.16 | 0.0.13 |
 | `@backstage/plugin-config-schema` | 0.1.85-next.0 | 0.1.83 | 0.1.78 |
@@ -128,7 +128,7 @@ Versions of **216 packages** across **3 RHDH releases** — columns ordered newe
 | `@backstage/plugin-devtools-backend` | 0.5.22-next.1 | 0.5.20 | 0.5.15 |
 | `@backstage/plugin-devtools-common` | 0.1.27-next.0 | 0.1.25 | 0.1.23 |
 | `@backstage/plugin-devtools-react` | 0.2.7-next.0 | 0.2.5 | 0.2.0 |
-| `@backstage/plugin-events-backend` | 0.6.7-next.1 | 0.6.5 | 0.6.0 |
+| `@backstage/plugin-events-backend` | 0.6.7-next.2 | 0.6.5 | 0.6.0 |
 | `@backstage/plugin-events-backend-module-aws-sqs` | 0.4.27-next.1 | 0.4.25 | 0.4.20 |
 | `@backstage/plugin-events-backend-module-azure` | 0.2.36-next.1 | 0.2.34 | 0.2.29 |
 | `@backstage/plugin-events-backend-module-bitbucket-cloud` | 0.2.36-next.1 | 0.2.34 | 0.2.29 |
@@ -144,11 +144,11 @@ Versions of **216 packages** across **3 RHDH releases** — columns ordered newe
 | `@backstage/plugin-home` | 0.9.11-next.0 | 0.9.9 | 0.9.3 |
 | `@backstage/plugin-home-react` | 0.1.43-next.0 | 0.1.41 | 0.1.36 |
 | `@backstage/plugin-kubernetes` | 0.12.24-next.0 | 0.12.22 | 0.12.17 |
-| `@backstage/plugin-kubernetes-backend` | 0.21.12-next.1 | 0.21.10 | 0.21.2 |
+| `@backstage/plugin-kubernetes-backend` | 0.21.12-next.2 | 0.21.10 | 0.21.2 |
 | `@backstage/plugin-kubernetes-cluster` | 0.0.42-next.0 | 0.0.40 | 0.0.35 |
 | `@backstage/plugin-kubernetes-common` | 0.9.14-next.0 | 0.9.12 | 0.9.10 |
 | `@backstage/plugin-kubernetes-node` | 0.4.9-next.1 | 0.4.7 | 0.4.2 |
-| `@backstage/plugin-kubernetes-react` | 0.6.1-next.0 | 0.5.23 | 0.5.17 |
+| `@backstage/plugin-kubernetes-react` | 0.6.1-next.1 | 0.5.23 | 0.5.17 |
 | `@backstage/plugin-mcp-actions-backend` | 0.2.3-next.1 | 0.2.1 | 0.1.11 |
 | `@backstage/plugin-mui-to-bui` | 0.2.12-next.1 | 0.2.10 | 0.2.5 |
 | `@backstage/plugin-notifications` | 0.6.1-next.0 | 0.5.20 | 0.5.15 |
@@ -157,7 +157,7 @@ Versions of **216 packages** across **3 RHDH releases** — columns ordered newe
 | `@backstage/plugin-notifications-backend-module-slack` | 0.4.7-next.1 | 0.4.5 | 0.4.0 |
 | `@backstage/plugin-notifications-common` | 0.2.5-next.0 | 0.2.3 | 0.2.1 |
 | `@backstage/plugin-notifications-node` | 0.2.31-next.1 | 0.2.29 | 0.2.24 |
-| `@backstage/plugin-org` | 0.7.10-next.0 | 0.7.8 | 0.7.0 |
+| `@backstage/plugin-org` | 0.8.0-next.1 | 0.7.8 | 0.7.0 |
 | `@backstage/plugin-org-react` | 0.1.55-next.0 | 0.1.53 | 0.1.48 |
 | `@backstage/plugin-permission-backend` | 0.7.17-next.1 | 0.7.15 | 0.7.10 |
 | `@backstage/plugin-permission-backend-module-allow-all-policy` | 0.2.24-next.1 | 0.2.22 | 0.2.17 |
@@ -166,7 +166,7 @@ Versions of **216 packages** across **3 RHDH releases** — columns ordered newe
 | `@backstage/plugin-permission-react` | 0.5.6-next.0 | 0.5.4 | 0.4.41 |
 | `@backstage/plugin-proxy-backend` | 0.6.19-next.1 | 0.6.17 | 0.6.11 |
 | `@backstage/plugin-proxy-node` | 0.1.20-next.1 | 0.1.18 | 0.1.13 |
-| `@backstage/plugin-scaffolder` | 1.39.1-next.0 | 1.38.2 | 1.36.1 |
+| `@backstage/plugin-scaffolder` | 1.39.1-next.1 | 1.38.2 | 1.36.1 |
 | `@backstage/plugin-scaffolder-backend` | 4.2.1-next.1 | 4.1.0 | 3.3.0 |
 | `@backstage/plugin-scaffolder-backend-module-azure` | 0.2.27-next.1 | 0.2.25 | 0.2.19 |
 | `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` | 0.3.12-next.1 | 0.3.10 | 0.3.4 |
@@ -177,7 +177,7 @@ Versions of **216 packages** across **3 RHDH releases** — columns ordered newe
 | `@backstage/plugin-scaffolder-backend-module-gerrit` | 0.2.26-next.1 | 0.2.24 | 0.2.19 |
 | `@backstage/plugin-scaffolder-backend-module-gitea` | 0.2.26-next.1 | 0.2.24 | 0.2.19 |
 | `@backstage/plugin-scaffolder-backend-module-github` | 0.10.1-next.1 | 0.9.13 | 0.9.7 |
-| `@backstage/plugin-scaffolder-backend-module-gitlab` | 0.12.1-next.1 | 0.11.10 | 0.11.4 |
+| `@backstage/plugin-scaffolder-backend-module-gitlab` | 0.12.1-next.2 | 0.11.10 | 0.11.4 |
 | `@backstage/plugin-scaffolder-backend-module-notifications` | 0.1.27-next.1 | 0.1.25 | 0.1.20 |
 | `@backstage/plugin-scaffolder-backend-module-rails` | 0.5.26-next.1 | 0.5.24 | 0.5.19 |
 | `@backstage/plugin-scaffolder-backend-module-sentry` | 0.4.1-next.1 | 0.3.7 | 0.3.2 |
@@ -198,22 +198,22 @@ Versions of **216 packages** across **3 RHDH releases** — columns ordered newe
 | `@backstage/plugin-search-backend-node` | 1.4.9-next.1 | 1.4.7 | 1.4.2 |
 | `@backstage/plugin-search-common` | 1.2.26-next.0 | 1.2.24 | 1.2.22 |
 | `@backstage/plugin-search-react` | 1.11.9-next.0 | 1.11.7 | 1.11.0 |
-| `@backstage/plugin-signals` | 0.0.36-next.0 | 0.0.34 | 0.0.29 |
-| `@backstage/plugin-signals-backend` | 0.3.20-next.1 | 0.3.18 | 0.3.13 |
+| `@backstage/plugin-signals` | 0.0.36-next.1 | 0.0.34 | 0.0.29 |
+| `@backstage/plugin-signals-backend` | 0.3.20-next.2 | 0.3.18 | 0.3.13 |
 | `@backstage/plugin-signals-node` | 0.2.6-next.1 | 0.2.4 | 0.1.29 |
 | `@backstage/plugin-signals-react` | 0.0.27-next.0 | 0.0.25 | 0.0.20 |
-| `@backstage/plugin-techdocs` | 1.19.0-next.0 | 1.18.0 | 1.17.2 |
+| `@backstage/plugin-techdocs` | 1.19.0-next.1 | 1.18.0 | 1.17.2 |
 | `@backstage/plugin-techdocs-addons-test-utils` | 2.0.10-next.0 | 2.0.8 | 2.0.3 |
-| `@backstage/plugin-techdocs-backend` | 2.3.1-next.1 | 2.2.4 | 2.1.6 |
-| `@backstage/plugin-techdocs-common` | 0.1.1 | 0.1.1 | 0.1.1 |
+| `@backstage/plugin-techdocs-backend` | 2.4.0-next.2 | 2.2.4 | 2.1.6 |
+| `@backstage/plugin-techdocs-common` | 0.1.2-next.0 | 0.1.1 | 0.1.1 |
 | `@backstage/plugin-techdocs-module-addons-contrib` | 1.1.41-next.0 | 1.1.39 | 1.1.34 |
-| `@backstage/plugin-techdocs-node` | 2.0.2-next.1 | 1.15.4 | 1.14.4 |
-| `@backstage/plugin-techdocs-react` | 1.3.16-next.1 | 1.3.14 | 1.3.9 |
+| `@backstage/plugin-techdocs-node` | 2.0.3-next.2 | 1.15.4 | 1.14.4 |
+| `@backstage/plugin-techdocs-react` | 1.3.16-next.2 | 1.3.14 | 1.3.9 |
 | `@backstage/plugin-user-settings` | 0.9.8-next.0 | 0.9.6 | 0.9.1 |
 | `@backstage/plugin-user-settings-backend` | 0.4.8-next.1 | 0.4.6 | 0.4.1 |
 | `@backstage/plugin-user-settings-common` | 0.1.0 | 0.1.0 | 0.1.0 |
 | `@backstage/release-manifests` | 0.0.15-next.0 | 0.0.14 | 0.0.13 |
-| `@backstage/repo-tools` | 0.19.2-next.1 | 0.19.0 | 0.17.0 |
+| `@backstage/repo-tools` | 0.19.2-next.2 | 0.19.0 | 0.17.0 |
 | `@backstage/test-utils` | 1.7.23-next.0 | 1.7.21 | 1.7.16 |
 | `@backstage/theme` | 0.7.3 | 0.7.3 | 0.7.2 |
 | `@backstage/types` | 1.2.2 | 1.2.2 | 1.2.2 |
