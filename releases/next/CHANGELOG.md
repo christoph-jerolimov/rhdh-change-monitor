@@ -1,6 +1,6 @@
 # RHDH Release next changelog
 
-Changes between Backstage 1.54.7 (RHDH 2.1) and Backstage 1.56.0-next.2 (RHDH next) — 5 added, 0 removed, 202 upgraded, 8 unchanged packages.
+Changes between Backstage 1.54.7 (RHDH 2.1) and Backstage 1.56.0-next.3 (RHDH next) — 5 added, 0 removed, 202 upgraded, 8 unchanged packages.
 
 ## Summary
 
@@ -9,8 +9,8 @@ Changes between Backstage 1.54.7 (RHDH 2.1) and Backstage 1.56.0-next.2 (RHDH ne
 - [0.x minor version bumps](#0x-minor-version-bumps): 5 packages
 - [0.0.x patch version bumps](#00x-patch-version-bumps): 2 packages
 - [0.x patch version bumps](#0x-patch-version-bumps): 75 packages
-- [Other minor version bumps](#other-minor-version-bumps): 9 packages
-- [Other patch version bumps](#other-patch-version-bumps): 16 packages
+- [Other minor version bumps](#other-minor-version-bumps): 10 packages
+- [Other patch version bumps](#other-patch-version-bumps): 15 packages
 - [Excluded dependency updates](#excluded-dependency-updates): 84 packages
 
 ## Table of contents
@@ -22,22 +22,22 @@ Changes between Backstage 1.54.7 (RHDH 2.1) and Backstage 1.56.0-next.2 (RHDH ne
   - [`@backstage/cli-module-search` (new, 0.2.0-next.0)](#backstagecli-module-search-new-020-next0)
   - [`@backstage/plugin-scaffolder-backend-module-workspace-database` (new, 0.1.1-next.1)](#backstageplugin-scaffolder-backend-module-workspace-database-new-011-next1)
 - [Breaking changes](#breaking-changes)
-  - [`@backstage/backend-plugin-api` (1.10.0 → 1.11.0-next.1)](#backstagebackend-plugin-api-1100--1110-next1)
+  - [`@backstage/backend-plugin-api` (1.10.0 → 1.11.0-next.2)](#backstagebackend-plugin-api-1100--1110-next2)
   - [`@backstage/connections` (0.3.0 → 0.4.1-next.0)](#backstageconnections-030--041-next0)
   - [`@backstage/plugin-auth-backend-module-cloudflare-access-provider` (0.4.18 → 0.5.1-next.1)](#backstageplugin-auth-backend-module-cloudflare-access-provider-0418--051-next1)
-  - [`@backstage/plugin-catalog-backend` (3.9.1 → 4.0.1-next.2)](#backstageplugin-catalog-backend-391--401-next2)
+  - [`@backstage/plugin-catalog-backend` (3.9.1 → 4.0.1-next.3)](#backstageplugin-catalog-backend-391--401-next3)
   - [`@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.7.15 → 0.9.0-next.1)](#backstageplugin-catalog-backend-module-incremental-ingestion-0715--090-next1)
   - [`@backstage/plugin-kubernetes-react` (0.5.23 → 0.6.1-next.1)](#backstageplugin-kubernetes-react-0523--061-next1)
   - [`@backstage/plugin-scaffolder-backend-module-github` (0.9.13 → 0.10.1-next.1)](#backstageplugin-scaffolder-backend-module-github-0913--0101-next1)
   - [`@backstage/plugin-scaffolder-backend-module-sentry` (0.3.7 → 0.4.1-next.1)](#backstageplugin-scaffolder-backend-module-sentry-037--041-next1)
   - [`@backstage/plugin-search-backend-module-elasticsearch` (1.8.7 → 2.0.1-next.1)](#backstageplugin-search-backend-module-elasticsearch-187--201-next1)
   - [`@backstage/plugin-techdocs-node` (1.15.4 → 2.0.3-next.2)](#backstageplugin-techdocs-node-1154--203-next2)
-  - [`@backstage/ui` (0.17.1 → 0.18.0)](#backstageui-0171--0180)
+  - [`@backstage/ui` (0.17.1 → 0.19.0-next.0)](#backstageui-0171--0190-next0)
 - [0.x minor version bumps](#0x-minor-version-bumps)
-  - [`@backstage/backend-defaults` (0.17.8 → 0.18.1-next.2)](#backstagebackend-defaults-0178--0181-next2)
+  - [`@backstage/backend-defaults` (0.17.8 → 0.18.1-next.3)](#backstagebackend-defaults-0178--0181-next3)
   - [`@backstage/plugin-catalog-backend-module-github` (0.13.5 → 0.14.1-next.1)](#backstageplugin-catalog-backend-module-github-0135--0141-next1)
-  - [`@backstage/plugin-notifications` (0.5.20 → 0.6.1-next.0)](#backstageplugin-notifications-0520--061-next0)
-  - [`@backstage/plugin-org` (0.7.8 → 0.8.0-next.1)](#backstageplugin-org-078--080-next1)
+  - [`@backstage/plugin-notifications` (0.5.20 → 0.6.1-next.1)](#backstageplugin-notifications-0520--061-next1)
+  - [`@backstage/plugin-org` (0.7.8 → 0.8.0-next.2)](#backstageplugin-org-078--080-next2)
   - [`@backstage/plugin-scaffolder-backend-module-gitlab` (0.11.10 → 0.12.1-next.2)](#backstageplugin-scaffolder-backend-module-gitlab-01110--0121-next2)
 - [0.0.x patch version bumps](#00x-patch-version-bumps)
   - [`@backstage/plugin-signals` (0.0.34 → 0.0.36-next.1)](#backstageplugin-signals-0034--0036-next1)
@@ -48,25 +48,25 @@ Changes between Backstage 1.54.7 (RHDH 2.1) and Backstage 1.56.0-next.2 (RHDH ne
   - [`@backstage/cli` (0.36.5 → 0.36.7-next.0)](#backstagecli-0365--0367-next0)
   - [`@backstage/cli-common` (0.3.0 → 0.3.2-next.0)](#backstagecli-common-030--032-next0)
   - [`@backstage/cli-defaults` (0.1.5 → 0.1.7-next.0)](#backstagecli-defaults-015--017-next0)
-  - [`@backstage/cli-module-build` (0.1.7 → 0.1.9-next.1)](#backstagecli-module-build-017--019-next1)
+  - [`@backstage/cli-module-build` (0.1.7 → 0.1.9-next.2)](#backstagecli-module-build-017--019-next2)
   - [`@backstage/cli-module-maintenance` (0.1.4 → 0.1.6-next.0)](#backstagecli-module-maintenance-014--016-next0)
   - [`@backstage/cli-module-new` (0.1.6 → 0.1.8-next.1)](#backstagecli-module-new-016--018-next1)
   - [`@backstage/cli-module-test-jest` (0.1.5 → 0.1.7-next.0)](#backstagecli-module-test-jest-015--017-next0)
   - [`@backstage/cli-node` (0.3.4 → 0.3.5-next.1)](#backstagecli-node-034--035-next1)
-  - [`@backstage/core-components` (0.18.13 → 0.18.15-next.2)](#backstagecore-components-01813--01815-next2)
-  - [`@backstage/create-app` (0.9.1 → 0.9.3-next.2)](#backstagecreate-app-091--093-next2)
+  - [`@backstage/core-components` (0.18.13 → 0.18.15-next.3)](#backstagecore-components-01813--01815-next3)
+  - [`@backstage/create-app` (0.9.1 → 0.9.3-next.3)](#backstagecreate-app-091--093-next3)
   - [`@backstage/filter-predicates` (0.1.4 → 0.1.6-next.0)](#backstagefilter-predicates-014--016-next0)
-  - [`@backstage/frontend-app-api` (0.16.7 → 0.16.9-next.0)](#backstagefrontend-app-api-0167--0169-next0)
+  - [`@backstage/frontend-app-api` (0.16.7 → 0.16.9-next.1)](#backstagefrontend-app-api-0167--0169-next1)
   - [`@backstage/frontend-dynamic-feature-loader` (0.1.15 → 0.1.17-next.0)](#backstagefrontend-dynamic-feature-loader-0115--0117-next0)
-  - [`@backstage/frontend-plugin-api` (0.18.0 → 0.18.2-next.0)](#backstagefrontend-plugin-api-0180--0182-next0)
+  - [`@backstage/frontend-plugin-api` (0.18.0 → 0.18.2-next.1)](#backstagefrontend-plugin-api-0180--0182-next1)
   - [`@backstage/frontend-test-utils` (0.6.3 → 0.6.5-next.0)](#backstagefrontend-test-utils-063--065-next0)
   - [`@backstage/module-federation-common` (0.1.4 → 0.1.6-next.0)](#backstagemodule-federation-common-014--016-next0)
-  - [`@backstage/plugin-api-docs` (0.14.4 → 0.14.6-next.0)](#backstageplugin-api-docs-0144--0146-next0)
-  - [`@backstage/plugin-app` (0.5.2 → 0.5.4-next.0)](#backstageplugin-app-052--054-next0)
+  - [`@backstage/plugin-api-docs` (0.14.4 → 0.14.6-next.1)](#backstageplugin-api-docs-0144--0146-next1)
+  - [`@backstage/plugin-app` (0.5.2 → 0.5.4-next.1)](#backstageplugin-app-052--054-next1)
   - [`@backstage/plugin-app-backend` (0.5.17 → 0.5.19-next.2)](#backstageplugin-app-backend-0517--0519-next2)
   - [`@backstage/plugin-app-module-user-settings` (0.1.1 → 0.1.3-next.0)](#backstageplugin-app-module-user-settings-011--013-next0)
   - [`@backstage/plugin-app-react` (0.2.6 → 0.2.8-next.0)](#backstageplugin-app-react-026--028-next0)
-  - [`@backstage/plugin-app-visualizer` (0.2.7 → 0.2.9-next.1)](#backstageplugin-app-visualizer-027--029-next1)
+  - [`@backstage/plugin-app-visualizer` (0.2.7 → 0.2.9-next.2)](#backstageplugin-app-visualizer-027--029-next2)
   - [`@backstage/plugin-auth-backend` (0.30.0 → 0.30.2-next.1)](#backstageplugin-auth-backend-0300--0302-next1)
   - [`@backstage/plugin-auth-backend-module-azure-easyauth-provider` (0.2.23 → 0.2.25-next.1)](#backstageplugin-auth-backend-module-azure-easyauth-provider-0223--0225-next1)
   - [`@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.4.18 → 0.4.20-next.1)](#backstageplugin-auth-backend-module-gcp-iap-provider-0418--0420-next1)
@@ -86,20 +86,20 @@ Changes between Backstage 1.54.7 (RHDH 2.1) and Backstage 1.56.0-next.2 (RHDH ne
   - [`@backstage/plugin-catalog-backend-module-ldap` (0.12.8 → 0.12.10-next.1)](#backstageplugin-catalog-backend-module-ldap-0128--01210-next1)
   - [`@backstage/plugin-catalog-backend-module-msgraph` (0.10.5 → 0.10.7-next.1)](#backstageplugin-catalog-backend-module-msgraph-0105--0107-next1)
   - [`@backstage/plugin-catalog-backend-module-puppetdb` (0.2.25 → 0.2.27-next.1)](#backstageplugin-catalog-backend-module-puppetdb-0225--0227-next1)
-  - [`@backstage/plugin-catalog-graph` (0.6.7 → 0.6.9-next.0)](#backstageplugin-catalog-graph-067--069-next0)
-  - [`@backstage/plugin-catalog-import` (0.13.17 → 0.13.19-next.0)](#backstageplugin-catalog-import-01317--01319-next0)
-  - [`@backstage/plugin-catalog-unprocessed-entities` (0.2.34 → 0.2.36-next.0)](#backstageplugin-catalog-unprocessed-entities-0234--0236-next0)
-  - [`@backstage/plugin-devtools` (0.1.42 → 0.1.44-next.0)](#backstageplugin-devtools-0142--0144-next0)
+  - [`@backstage/plugin-catalog-graph` (0.6.7 → 0.6.9-next.1)](#backstageplugin-catalog-graph-067--069-next1)
+  - [`@backstage/plugin-catalog-import` (0.13.17 → 0.13.19-next.1)](#backstageplugin-catalog-import-01317--01319-next1)
+  - [`@backstage/plugin-catalog-unprocessed-entities` (0.2.34 → 0.2.36-next.1)](#backstageplugin-catalog-unprocessed-entities-0234--0236-next1)
+  - [`@backstage/plugin-devtools` (0.1.42 → 0.1.44-next.1)](#backstageplugin-devtools-0142--0144-next1)
   - [`@backstage/plugin-events-backend` (0.6.5 → 0.6.7-next.2)](#backstageplugin-events-backend-065--067-next2)
-  - [`@backstage/plugin-home` (0.9.9 → 0.9.11-next.0)](#backstageplugin-home-099--0911-next0)
+  - [`@backstage/plugin-home` (0.9.9 → 0.9.11-next.1)](#backstageplugin-home-099--0911-next1)
   - [`@backstage/plugin-home-react` (0.1.41 → 0.1.43-next.0)](#backstageplugin-home-react-0141--0143-next0)
-  - [`@backstage/plugin-kubernetes` (0.12.22 → 0.12.24-next.0)](#backstageplugin-kubernetes-01222--01224-next0)
+  - [`@backstage/plugin-kubernetes` (0.12.22 → 0.12.24-next.1)](#backstageplugin-kubernetes-01222--01224-next1)
   - [`@backstage/plugin-kubernetes-backend` (0.21.10 → 0.21.12-next.2)](#backstageplugin-kubernetes-backend-02110--02112-next2)
   - [`@backstage/plugin-kubernetes-common` (0.9.12 → 0.9.14-next.0)](#backstageplugin-kubernetes-common-0912--0914-next0)
   - [`@backstage/plugin-kubernetes-node` (0.4.7 → 0.4.9-next.1)](#backstageplugin-kubernetes-node-047--049-next1)
   - [`@backstage/plugin-mcp-actions-backend` (0.2.1 → 0.2.3-next.1)](#backstageplugin-mcp-actions-backend-021--023-next1)
-  - [`@backstage/plugin-mui-to-bui` (0.2.10 → 0.2.12-next.1)](#backstageplugin-mui-to-bui-0210--0212-next1)
-  - [`@backstage/plugin-notifications-backend` (0.6.8 → 0.6.10-next.1)](#backstageplugin-notifications-backend-068--0610-next1)
+  - [`@backstage/plugin-mui-to-bui` (0.2.10 → 0.2.12-next.2)](#backstageplugin-mui-to-bui-0210--0212-next2)
+  - [`@backstage/plugin-notifications-backend` (0.6.8 → 0.6.10-next.2)](#backstageplugin-notifications-backend-068--0610-next2)
   - [`@backstage/plugin-notifications-backend-module-email` (0.3.24 → 0.3.26-next.1)](#backstageplugin-notifications-backend-module-email-0324--0326-next1)
   - [`@backstage/plugin-notifications-backend-module-slack` (0.4.5 → 0.4.7-next.1)](#backstageplugin-notifications-backend-module-slack-045--047-next1)
   - [`@backstage/plugin-notifications-node` (0.2.29 → 0.2.31-next.1)](#backstageplugin-notifications-node-0229--0231-next1)
@@ -116,32 +116,32 @@ Changes between Backstage 1.54.7 (RHDH 2.1) and Backstage 1.56.0-next.2 (RHDH ne
   - [`@backstage/plugin-search-backend-module-techdocs` (0.4.17 → 0.4.19-next.1)](#backstageplugin-search-backend-module-techdocs-0417--0419-next1)
   - [`@backstage/plugin-signals-backend` (0.3.18 → 0.3.20-next.2)](#backstageplugin-signals-backend-0318--0320-next2)
   - [`@backstage/plugin-techdocs-common` (0.1.1 → 0.1.2-next.0)](#backstageplugin-techdocs-common-011--012-next0)
-  - [`@backstage/plugin-user-settings` (0.9.6 → 0.9.8-next.0)](#backstageplugin-user-settings-096--098-next0)
-  - [`@backstage/repo-tools` (0.19.0 → 0.19.2-next.2)](#backstagerepo-tools-0190--0192-next2)
+  - [`@backstage/plugin-user-settings` (0.9.6 → 0.9.8-next.1)](#backstageplugin-user-settings-096--098-next1)
+  - [`@backstage/repo-tools` (0.19.0 → 0.19.2-next.3)](#backstagerepo-tools-0190--0192-next3)
 - [Other minor version bumps](#other-minor-version-bumps)
-  - [`@backstage/backend-app-api` (1.7.3 → 1.8.0-next.1)](#backstagebackend-app-api-173--180-next1)
+  - [`@backstage/backend-app-api` (1.7.3 → 1.8.0-next.2)](#backstagebackend-app-api-173--180-next2)
   - [`@backstage/plugin-catalog-common` (1.1.10 → 1.2.1-next.0)](#backstageplugin-catalog-common-1110--121-next0)
-  - [`@backstage/plugin-scaffolder` (1.38.2 → 1.39.1-next.1)](#backstageplugin-scaffolder-1382--1391-next1)
+  - [`@backstage/plugin-catalog-react` (3.2.2 → 3.3.0-next.2)](#backstageplugin-catalog-react-322--330-next2)
+  - [`@backstage/plugin-scaffolder` (1.38.2 → 1.40.0-next.2)](#backstageplugin-scaffolder-1382--1400-next2)
   - [`@backstage/plugin-scaffolder-backend` (4.1.0 → 4.2.1-next.1)](#backstageplugin-scaffolder-backend-410--421-next1)
   - [`@backstage/plugin-scaffolder-common` (2.2.3 → 2.3.1-next.0)](#backstageplugin-scaffolder-common-223--231-next0)
-  - [`@backstage/plugin-scaffolder-react` (2.0.3 → 2.1.1-next.0)](#backstageplugin-scaffolder-react-203--211-next0)
-  - [`@backstage/plugin-techdocs` (1.18.0 → 1.19.0-next.1)](#backstageplugin-techdocs-1180--1190-next1)
+  - [`@backstage/plugin-scaffolder-react` (2.0.3 → 2.1.1-next.1)](#backstageplugin-scaffolder-react-203--211-next1)
+  - [`@backstage/plugin-techdocs` (1.18.0 → 1.19.0-next.2)](#backstageplugin-techdocs-1180--1190-next2)
   - [`@backstage/plugin-techdocs-backend` (2.2.4 → 2.4.0-next.2)](#backstageplugin-techdocs-backend-224--240-next2)
   - [`@techdocs/cli` (1.11.4 → 1.12.1-next.0)](#techdocscli-1114--1121-next0)
 - [Other patch version bumps](#other-patch-version-bumps)
-  - [`@backstage/backend-test-utils` (1.11.6 → 1.11.8-next.1)](#backstagebackend-test-utils-1116--1118-next1)
-  - [`@backstage/catalog-client` (1.16.1 → 1.16.3-next.0)](#backstagecatalog-client-1161--1163-next0)
+  - [`@backstage/backend-test-utils` (1.11.6 → 1.11.8-next.2)](#backstagebackend-test-utils-1116--1118-next2)
+  - [`@backstage/catalog-client` (1.16.1 → 1.16.3-next.1)](#backstagecatalog-client-1161--1163-next1)
   - [`@backstage/catalog-model` (1.10.0 → 1.10.2-next.0)](#backstagecatalog-model-1100--1102-next0)
   - [`@backstage/config` (1.3.8 → 1.3.10-next.0)](#backstageconfig-138--1310-next0)
-  - [`@backstage/core-app-api` (1.20.4 → 1.20.6-next.0)](#backstagecore-app-api-1204--1206-next0)
+  - [`@backstage/core-app-api` (1.20.4 → 1.20.6-next.1)](#backstagecore-app-api-1204--1206-next1)
   - [`@backstage/errors` (1.3.1 → 1.3.2-next.0)](#backstageerrors-131--132-next0)
   - [`@backstage/integration` (2.1.1 → 2.1.3-next.1)](#backstageintegration-211--213-next1)
-  - [`@backstage/plugin-catalog` (2.0.8 → 2.0.10-next.2)](#backstageplugin-catalog-208--2010-next2)
-  - [`@backstage/plugin-catalog-react` (3.2.2 → 3.2.4-next.1)](#backstageplugin-catalog-react-322--324-next1)
-  - [`@backstage/plugin-search` (1.7.7 → 1.7.9-next.0)](#backstageplugin-search-177--179-next0)
+  - [`@backstage/plugin-catalog` (2.0.8 → 2.0.10-next.3)](#backstageplugin-catalog-208--2010-next3)
+  - [`@backstage/plugin-search` (1.7.7 → 1.7.9-next.1)](#backstageplugin-search-177--179-next1)
   - [`@backstage/plugin-search-backend` (2.1.6 → 2.1.8-next.1)](#backstageplugin-search-backend-216--218-next1)
   - [`@backstage/plugin-search-backend-node` (1.4.7 → 1.4.9-next.1)](#backstageplugin-search-backend-node-147--149-next1)
-  - [`@backstage/plugin-techdocs-addons-test-utils` (2.0.8 → 2.0.10-next.0)](#backstageplugin-techdocs-addons-test-utils-208--2010-next0)
+  - [`@backstage/plugin-techdocs-addons-test-utils` (2.0.8 → 2.0.10-next.1)](#backstageplugin-techdocs-addons-test-utils-208--2010-next1)
   - [`@backstage/plugin-techdocs-module-addons-contrib` (1.1.39 → 1.1.41-next.0)](#backstageplugin-techdocs-module-addons-contrib-1139--1141-next0)
   - [`@backstage/plugin-techdocs-react` (1.3.14 → 1.3.16-next.2)](#backstageplugin-techdocs-react-1314--1316-next2)
   - [`@backstage/test-utils` (1.7.21 → 1.7.23-next.0)](#backstagetest-utils-1721--1723-next0)
@@ -272,7 +272,13 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 ## Breaking changes
 
-### `@backstage/backend-plugin-api` (1.10.0 → [1.11.0-next.1](../../changelogs/@backstage/backend-plugin-api.md#1110-next1))
+### `@backstage/backend-plugin-api` (1.10.0 → [1.11.0-next.2](../../changelogs/@backstage/backend-plugin-api.md#1110-next2))
+
+#### 1.11.0-next.2
+
+##### Minor Changes
+
+- [`f6054ac`](https://github.com/backstage/backstage/commit/f6054ac): Added experimental `declareConnection` and `connectionsServiceRef` exports to `@backstage/backend-plugin-api/alpha`. Plugins and modules can declare connection dependencies and request the connections service without importing private packages.
 
 #### 1.11.0-next.1
 
@@ -339,7 +345,15 @@ verify-patches` to validate Yarn patch references, local patch files,
         audience: ${AUTH_CFACCESS_AUDIENCE}
   ```
 
-### `@backstage/plugin-catalog-backend` (3.9.1 → [4.0.1-next.2](../../changelogs/@backstage/plugin-catalog-backend.md#401-next2))
+### `@backstage/plugin-catalog-backend` (3.9.1 → [4.0.1-next.3](../../changelogs/@backstage/plugin-catalog-backend.md#401-next3))
+
+#### 4.0.1-next.3
+
+##### Patch Changes
+
+- [`aa6e7c6`](https://github.com/backstage/backstage/commit/aa6e7c6): Reduce repeated work for entities that fail stitching by gradually increasing retry delays with jitter. Failed entities remain eligible for recovery, and new stitching requests reset their failure count.
+- [`d7cc6e5`](https://github.com/backstage/backstage/commit/d7cc6e5): Reject non-positive stitching polling intervals and lease durations at startup to prevent continuous polling and immediate lease expiry. Configuration errors identify the setting that needs correction.
+- [`7c376ff`](https://github.com/backstage/backstage/commit/7c376ff): Improved the performance and planner stability of orphan entity cleanup on large PostgreSQL catalogs. Orphan deletion and updates to related entities are now atomic, so a failed cleanup does not leave related entities waiting indefinitely for updated relations. Cleanup also preserves entities when a new reference is committed while it waits to delete them.
 
 #### 4.0.1-next.2
 
@@ -584,7 +598,27 @@ verify-patches` to validate Yarn patch references, local patch files,
 - [`45cbd0a`](https://github.com/backstage/backstage/commit/45cbd0a): Improved validation of MkDocs configuration values during TechDocs generation.
 - [`030331b`](https://github.com/backstage/backstage/commit/030331b): Improved file validation in the local TechDocs publisher during the publish step.
 
-### `@backstage/ui` (0.17.1 → [0.18.0](../../changelogs/@backstage/ui.md#0180))
+### `@backstage/ui` (0.17.1 → [0.19.0-next.0](../../changelogs/@backstage/ui.md#0190-next0))
+
+#### 0.19.0-next.0
+
+##### Minor Changes
+
+- [`4e7a710`](https://github.com/backstage/backstage/commit/4e7a710): Updated React Aria dependencies to React Aria Components 1.22.0, React Aria 3.53.0, and React Stately 3.51.0. Existing Checkbox, Radio, and Switch implementations are retained.
+
+  **Migration:**
+
+  `MenuSection` no longer accepts `disabledKeys`. Move `disabledKeys` to `Menu` or set `isDisabled` on the affected `MenuItem` components.
+
+  Programmatic clicks on Checkbox and Switch labels no longer toggle their selection. Target the input when activating these controls programmatically, and use a full pointer interaction when simulating label clicks in tests.
+
+  **Affected components:** Checkbox, Menu, Switch
+
+##### Patch Changes
+
+- [`6c9ed14`](https://github.com/backstage/backstage/commit/6c9ed14): Fixed `Combobox` keyboard selection while filtering. With `search`, or with `items` and no `search`, the arrow keys now move through the matching options only, and Enter selects the highlighted one. Screen readers also announce the number of matching options. As with a `Combobox` without `search`, opening the list with the button or on focus shows every option until the user types. With `search.filter`, Escape and blur now restore the label of the selected option even when the filter excludes it. In that case, the number of options announced to screen readers still counts the hidden selected option.
+
+  **Affected components:** Combobox
 
 #### 0.18.0
 
@@ -622,9 +656,46 @@ verify-patches` to validate Yarn patch references, local patch files,
 
   **Affected components:** `useTable`
 
+#### 0.18.0-next.2
+
+##### Patch Changes
+
+- [`0dd80f7`](https://github.com/backstage/backstage/commit/0dd80f7): Fixed pagination state handling in `useTable`, including initial offsets, shrinking complete datasets, controlled loading transitions, valid zero and empty cursors, cached error recovery, immediately resolving reloads, and unnecessary reloads when controlled callback identities change.
+
+  **Affected components:** `useTable`
+
+#### 0.18.0-next.1
+
+##### Minor Changes
+
+- [`d07e99e`](https://github.com/backstage/backstage/commit/d07e99e): Updated BUI links to use the hosting application's client-side router, including relative destinations and the application's configured router base path, while preserving native browser navigation where required.
+
+  **BREAKING**: Anchor-based components no longer accept the React Aria `render` prop. BUI now owns the underlying anchor so routing behavior remains consistent across application and plugin package versions.
+
+  ListRow, Tag, and table Row now retain client-side navigation when application and plugin packages load separate React Aria copies. Their existing modifier-key, target, download, and link-metadata behavior is unchanged.
+
+  **Migration:**
+
+  Remove `render` props from ButtonLink, ComboboxItem, Link, MenuItem, MenuListBoxItem, SearchAutocompleteItem, SelectItem, and Tab. BUI now selects and renders the appropriate anchor or router link automatically.
+
+  **Affected components:** ButtonLink, Card, ComboboxItem, Header, Link, ListRow, MenuItem, MenuListBoxItem, Row, SearchAutocompleteItem, SelectItem, Tab, Tag
+
+#### 0.17.2-next.0
+
+##### Patch Changes
+
+- [`f914343`](https://github.com/backstage/backstage/commit/f914343): Prevent BUI styles from overriding document and native control line heights while preserving BUI component typography.
+
 ## 0.x minor version bumps
 
-### `@backstage/backend-defaults` (0.17.8 → [0.18.1-next.2](../../changelogs/@backstage/backend-defaults.md#0181-next2))
+### `@backstage/backend-defaults` (0.17.8 → [0.18.1-next.3](../../changelogs/@backstage/backend-defaults.md#0181-next3))
+
+#### 0.18.1-next.3
+
+##### Patch Changes
+
+- [`f6054ac`](https://github.com/backstage/backstage/commit/f6054ac): Backends created with `createBackend` now provide the experimental connections service by default. Custom backends can install `connectionsServiceFactory` from `@backstage/backend-defaults/alpha`.
+- [`bd1ff39`](https://github.com/backstage/backstage/commit/bd1ff39): Fixed AWS RDS IAM authentication tokens being reused after their signing credentials expire, which could cause database connection failures when using temporary AWS credentials.
 
 #### 0.18.1-next.2
 
@@ -706,7 +777,13 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`6ecff59`](https://github.com/backstage/backstage/commit/6ecff59): The GitHub multi-org entity provider now logs a clear warning and aborts ingestion when no GitHub App installation is found for an org, instead of failing with a confusing rate-limit or authentication error. This prevents silent deletion of existing catalog entities.
 
-### `@backstage/plugin-notifications` (0.5.20 → [0.6.1-next.0](../../changelogs/@backstage/plugin-notifications.md#061-next0))
+### `@backstage/plugin-notifications` (0.5.20 → [0.6.1-next.1](../../changelogs/@backstage/plugin-notifications.md#061-next1))
+
+#### 0.6.1-next.1
+
+##### Patch Changes
+
+- [`4e7a710`](https://github.com/backstage/backstage/commit/4e7a710): Updated React Aria dependencies to the October 2026 release.
 
 #### 0.6.0
 
@@ -725,7 +802,7 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`b31afcf`](https://github.com/backstage/backstage/commit/b31afcf): Fixed circular dependency warnings when building the notification settings UI.
 
-### `@backstage/plugin-org` (0.7.8 → [0.8.0-next.1](../../changelogs/@backstage/plugin-org.md#080-next1))
+### `@backstage/plugin-org` (0.7.8 → [0.8.0-next.2](../../changelogs/@backstage/plugin-org.md#080-next2))
 
 #### 0.8.0-next.1
 
@@ -914,7 +991,14 @@ verify-patches` to validate Yarn patch references, local patch files,
   selected Backstage release. The command is included in
   `@backstage/cli-defaults`.
 
-### `@backstage/cli-module-build` (0.1.7 → [0.1.9-next.1](../../changelogs/@backstage/cli-module-build.md#019-next1))
+### `@backstage/cli-module-build` (0.1.7 → [0.1.9-next.2](../../changelogs/@backstage/cli-module-build.md#019-next2))
+
+#### 0.1.9-next.2
+
+##### Patch Changes
+
+- [`cc4ef47`](https://github.com/backstage/backstage/commit/cc4ef47): Restored the default exclusion of `node_modules` from test coverage for this package.
+- [`f163298`](https://github.com/backstage/backstage/commit/f163298): Improved code splitting for frontend module federation remotes to reduce unnecessary downloads of unrelated lazy components from the same dependency scope. Shared dependencies and workspace code are extracted across lazy boundaries when the resulting shared chunk meets the size threshold. Regular application builds are unchanged.
 
 #### 0.1.9-next.1
 
@@ -1026,7 +1110,13 @@ verify-patches` to validate Yarn patch references, local patch files,
 
   `@backstage/cli-node` now provides shared parsers for repeatable `key=value` inputs and comma-separated lists.
 
-### `@backstage/core-components` (0.18.13 → [0.18.15-next.2](../../changelogs/@backstage/core-components.md#01815-next2))
+### `@backstage/core-components` (0.18.13 → [0.18.15-next.3](../../changelogs/@backstage/core-components.md#01815-next3))
+
+#### 0.18.15-next.3
+
+##### Patch Changes
+
+- [`e415488`](https://github.com/backstage/backstage/commit/e415488): Stop clearing the selected provider from `localStorage` when a sign-in loader is cancelled. Only clear it when the loader actually fails. Memoize `getSignInProviders` so it does not recreate the providers object on every render.
 
 #### 0.18.15-next.2
 
@@ -1060,7 +1150,13 @@ verify-patches` to validate Yarn patch references, local patch files,
 - [`b80a9f3`](https://github.com/backstage/backstage/commit/b80a9f3): Added an `onCopyLog` prop to the `LogViewer` component that renders a copy button in the toolbar, allowing users to copy all log content to the clipboard.
 - [`279fdf6`](https://github.com/backstage/backstage/commit/279fdf6): Declared the DOM Testing Library dependency required by React Testing Library.
 
-### `@backstage/create-app` (0.9.1 → [0.9.3-next.2](../../changelogs/@backstage/create-app.md#093-next2))
+### `@backstage/create-app` (0.9.1 → [0.9.3-next.3](../../changelogs/@backstage/create-app.md#093-next3))
+
+#### 0.9.3-next.3
+
+##### Patch Changes
+
+- Bumped create-app version.
 
 #### 0.9.3-next.2
 
@@ -1123,7 +1219,14 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`6dcb08a`](https://github.com/backstage/backstage/commit/6dcb08a): Reduced the frontend bundle size by letting bundlers tree-shake zod, which previously pulled every zod locale into the bundle. Takes effect on zod 4.5.0 and newer.
 
-### `@backstage/frontend-app-api` (0.16.7 → [0.16.9-next.0](../../changelogs/@backstage/frontend-app-api.md#0169-next0))
+### `@backstage/frontend-app-api` (0.16.7 → [0.16.9-next.1](../../changelogs/@backstage/frontend-app-api.md#0169-next1))
+
+#### 0.16.9-next.1
+
+##### Patch Changes
+
+- [`0caa896`](https://github.com/backstage/backstage/commit/0caa896): Provided an implementation of `AppLifecycleApi` and updated the app preparation and finalization process to utilize this API.
+- [`d810cc9`](https://github.com/backstage/backstage/commit/d810cc9): Improved link resolution performance by reusing route matches for recently visited locations.
 
 #### 0.16.8
 
@@ -1151,7 +1254,14 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`064c2de`](https://github.com/backstage/backstage/commit/064c2de): Updated the Module Federation dependencies to versions that avoid known security vulnerabilities.
 
-### `@backstage/frontend-plugin-api` (0.18.0 → [0.18.2-next.0](../../changelogs/@backstage/frontend-plugin-api.md#0182-next0))
+### `@backstage/frontend-plugin-api` (0.18.0 → [0.18.2-next.1](../../changelogs/@backstage/frontend-plugin-api.md#0182-next1))
+
+#### 0.18.2-next.1
+
+##### Patch Changes
+
+- [`a650c4f`](https://github.com/backstage/backstage/commit/a650c4f): Added `AppLifecycleApi` and `appLifecycleApiRef`, which let you check whether the app has been finalized and subscribe to changes in its lifecycle.
+- [`a650c4f`](https://github.com/backstage/backstage/commit/a650c4f): The `useRouteRef` hook now resolves the route again once the app has been finalized, so that elements rendered before finalization, such as `app/root.elements` extensions, can link to pages instead of getting `undefined`.
 
 #### 0.18.1
 
@@ -1194,7 +1304,7 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`064c2de`](https://github.com/backstage/backstage/commit/064c2de): Updated the Module Federation dependencies to versions that avoid known security vulnerabilities.
 
-### `@backstage/plugin-api-docs` (0.14.4 → [0.14.6-next.0](../../changelogs/@backstage/plugin-api-docs.md#0146-next0))
+### `@backstage/plugin-api-docs` (0.14.4 → [0.14.6-next.1](../../changelogs/@backstage/plugin-api-docs.md#0146-next1))
 
 #### 0.14.5
 
@@ -1203,7 +1313,14 @@ verify-patches` to validate Yarn patch references, local patch files,
 - [`736d84e`](https://github.com/backstage/backstage/commit/736d84e): Use locale-insensitive Unicode casing for consistent string handling across environments.
 - [`4b643e3`](https://github.com/backstage/backstage/commit/4b643e3): Migrate plugin-api-docs to the configSchema API to remove the deprecated config.schema usage.
 
-### `@backstage/plugin-app` (0.5.2 → [0.5.4-next.0](../../changelogs/@backstage/plugin-app.md#054-next0))
+### `@backstage/plugin-app` (0.5.2 → [0.5.4-next.1](../../changelogs/@backstage/plugin-app.md#054-next1))
+
+#### 0.5.4-next.1
+
+##### Patch Changes
+
+- [`4e7a710`](https://github.com/backstage/backstage/commit/4e7a710): Updated React Aria dependencies to the October 2026 release.
+- [`1eeab07`](https://github.com/backstage/backstage/commit/1eeab07): Fixed long words in toast titles and descriptions overflowing the notification and overlapping the close button.
 
 #### 0.5.3
 
@@ -1260,7 +1377,13 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`40838dc`](https://github.com/backstage/backstage/commit/40838dc): Added an extension boundary around custom navigation content.
 
-### `@backstage/plugin-app-visualizer` (0.2.7 → [0.2.9-next.1](../../changelogs/@backstage/plugin-app-visualizer.md#029-next1))
+### `@backstage/plugin-app-visualizer` (0.2.7 → [0.2.9-next.2](../../changelogs/@backstage/plugin-app-visualizer.md#029-next2))
+
+#### 0.2.9-next.2
+
+##### Patch Changes
+
+- [`4e7a710`](https://github.com/backstage/backstage/commit/4e7a710): Updated React Aria dependencies to the October 2026 release.
 
 #### 0.2.9-next.1
 
@@ -1479,7 +1602,7 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`736d84e`](https://github.com/backstage/backstage/commit/736d84e): Use locale-insensitive Unicode casing for consistent string handling across environments.
 
-### `@backstage/plugin-catalog-graph` (0.6.7 → [0.6.9-next.0](../../changelogs/@backstage/plugin-catalog-graph.md#069-next0))
+### `@backstage/plugin-catalog-graph` (0.6.7 → [0.6.9-next.1](../../changelogs/@backstage/plugin-catalog-graph.md#069-next1))
 
 #### 0.6.8
 
@@ -1487,7 +1610,7 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`736d84e`](https://github.com/backstage/backstage/commit/736d84e): Use locale-insensitive Unicode casing for consistent string handling across environments.
 
-### `@backstage/plugin-catalog-import` (0.13.17 → [0.13.19-next.0](../../changelogs/@backstage/plugin-catalog-import.md#01319-next0))
+### `@backstage/plugin-catalog-import` (0.13.17 → [0.13.19-next.1](../../changelogs/@backstage/plugin-catalog-import.md#01319-next1))
 
 #### 0.13.18
 
@@ -1503,7 +1626,7 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`d421187`](https://github.com/backstage/backstage/commit/d421187): Reduced the initial app bundle size by loading page and optional UI implementations only when their extensions render.
 
-### `@backstage/plugin-catalog-unprocessed-entities` (0.2.34 → [0.2.36-next.0](../../changelogs/@backstage/plugin-catalog-unprocessed-entities.md#0236-next0))
+### `@backstage/plugin-catalog-unprocessed-entities` (0.2.34 → [0.2.36-next.1](../../changelogs/@backstage/plugin-catalog-unprocessed-entities.md#0236-next1))
 
 #### 0.2.35
 
@@ -1518,7 +1641,7 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`d421187`](https://github.com/backstage/backstage/commit/d421187): Reduced the initial app bundle size by loading page and optional UI implementations only when their extensions render.
 
-### `@backstage/plugin-devtools` (0.1.42 → [0.1.44-next.0](../../changelogs/@backstage/plugin-devtools.md#0144-next0))
+### `@backstage/plugin-devtools` (0.1.42 → [0.1.44-next.1](../../changelogs/@backstage/plugin-devtools.md#0144-next1))
 
 #### 0.1.43
 
@@ -1547,7 +1670,7 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`02fd3bf`](https://github.com/backstage/backstage/commit/02fd3bf): Improve database event cleanup under large backlogs and speed up reading events for subscriptions with many retained events.
 
-### `@backstage/plugin-home` (0.9.9 → [0.9.11-next.0](../../changelogs/@backstage/plugin-home.md#0911-next0))
+### `@backstage/plugin-home` (0.9.9 → [0.9.11-next.1](../../changelogs/@backstage/plugin-home.md#0911-next1))
 
 #### 0.9.10
 
@@ -1571,7 +1694,7 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`cd4a9c7`](https://github.com/backstage/backstage/commit/cd4a9c7): Fixed `CardExtension` to avoid requiring app context when a custom `Renderer` is provided.
 
-### `@backstage/plugin-kubernetes` (0.12.22 → [0.12.24-next.0](../../changelogs/@backstage/plugin-kubernetes.md#01224-next0))
+### `@backstage/plugin-kubernetes` (0.12.22 → [0.12.24-next.1](../../changelogs/@backstage/plugin-kubernetes.md#01224-next1))
 
 #### 0.12.23
 
@@ -1669,7 +1792,7 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`4a27653`](https://github.com/backstage/backstage/commit/4a27653): The default MCP server at `/api/mcp-actions/v1` is now always exposed. Previously, configuring `mcpActions.servers` replaced it, so the default endpoint was no longer served once a single named server was added. Named servers are now subsets of the default one, which continues to expose every registered action, so the same action can be exposed both there and on as many named servers as you like.
 
-### `@backstage/plugin-mui-to-bui` (0.2.10 → [0.2.12-next.1](../../changelogs/@backstage/plugin-mui-to-bui.md#0212-next1))
+### `@backstage/plugin-mui-to-bui` (0.2.10 → [0.2.12-next.2](../../changelogs/@backstage/plugin-mui-to-bui.md#0212-next2))
 
 #### 0.2.12-next.1
 
@@ -1677,7 +1800,13 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`701eaf4`](https://github.com/backstage/backstage/commit/701eaf4): The text now points to the main documentation instead of repeating information here.
 
-### `@backstage/plugin-notifications-backend` (0.6.8 → [0.6.10-next.1](../../changelogs/@backstage/plugin-notifications-backend.md#0610-next1))
+### `@backstage/plugin-notifications-backend` (0.6.8 → [0.6.10-next.2](../../changelogs/@backstage/plugin-notifications-backend.md#0610-next2))
+
+#### 0.6.10-next.2
+
+##### Patch Changes
+
+- [`8ba34e8`](https://github.com/backstage/backstage/commit/8ba34e8): Persist notification payload metadata for user notifications and broadcasts, and return it when reading notifications. Re-sending a scoped notification replaces its metadata, or clears it when the new payload omits metadata.
 
 #### 0.6.9
 
@@ -1936,7 +2065,7 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`45b0b89`](https://github.com/backstage/backstage/commit/45b0b89): Added a new `techdocs.actions.read` permission, available from the `/alpha` entry point, which controls access to the TechDocs actions registered with the Actions Registry.
 
-### `@backstage/plugin-user-settings` (0.9.6 → [0.9.8-next.0](../../changelogs/@backstage/plugin-user-settings.md#098-next0))
+### `@backstage/plugin-user-settings` (0.9.6 → [0.9.8-next.1](../../changelogs/@backstage/plugin-user-settings.md#098-next1))
 
 #### 0.9.7
 
@@ -1951,7 +2080,13 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`d421187`](https://github.com/backstage/backstage/commit/d421187): Reduced the initial app bundle size by loading page and optional UI implementations only when their extensions render.
 
-### `@backstage/repo-tools` (0.19.0 → [0.19.2-next.2](../../changelogs/@backstage/repo-tools.md#0192-next2))
+### `@backstage/repo-tools` (0.19.0 → [0.19.2-next.3](../../changelogs/@backstage/repo-tools.md#0192-next3))
+
+#### 0.19.2-next.3
+
+##### Patch Changes
+
+- [`dec6175`](https://github.com/backstage/backstage/commit/dec6175): When an API, CLI, SQL, or knip report is out of date in CI, the error output now shows a diff of the changes that need to be committed instead of printing the full expected report.
 
 #### 0.19.2-next.2
 
@@ -1989,7 +2124,13 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 ## Other minor version bumps
 
-### `@backstage/backend-app-api` (1.7.3 → [1.8.0-next.1](../../changelogs/@backstage/backend-app-api.md#180-next1))
+### `@backstage/backend-app-api` (1.7.3 → [1.8.0-next.2](../../changelogs/@backstage/backend-app-api.md#180-next2))
+
+#### 1.8.0-next.2
+
+##### Patch Changes
+
+- [`f6054ac`](https://github.com/backstage/backstage/commit/f6054ac): Updated undeclared-connection errors to direct plugin authors to `declareConnection` from `@backstage/backend-plugin-api/alpha`.
 
 #### 1.8.0-next.1
 
@@ -2011,7 +2152,57 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`305e2f7`](https://github.com/backstage/backstage/commit/305e2f7): Added permissions for reading and managing catalog ingestion providers.
 
-### `@backstage/plugin-scaffolder` (1.38.2 → [1.39.1-next.1](../../changelogs/@backstage/plugin-scaffolder.md#1391-next1))
+### `@backstage/plugin-catalog-react` (3.2.2 → [3.3.0-next.2](../../changelogs/@backstage/plugin-catalog-react.md#330-next2))
+
+#### 3.3.0-next.2
+
+##### Minor Changes
+
+- [`6c74f3f`](https://github.com/backstage/backstage/commit/6c74f3f): Added `getCatalogQuery` to `EntityFilter`, which lets filters express their backend constraints as a filter predicate. This supports logical operators such as `$any` and `$not`, as well as matchers like `$hasPrefix`, that cannot be expressed with `getCatalogFilters`. All builtin filters now implement it, and `getCatalogFilters` is deprecated. If a filter implements both, only `getCatalogQuery` is used.
+
+  The `EntityListProvider` and related components combine the predicates of all active filters into a `query`, and send it to the catalog backend alongside a `filter` built from any remaining legacy filters. When not paginating, entities are now fetched using `streamEntities` instead of `getEntities`, since the latter does not support predicate queries. Tests that mock `getEntities` to provide entities to an `EntityListProvider` need to mock `streamEntities` instead.
+
+  This requires a catalog backend from Backstage release 1.49 or later, which added support for predicate queries.
+
+  Since entities are now fetched using `queryEntities` also when not paginating, an `EntityOrderFilter` that orders by a field that some entities lack now excludes those entities from the result, consistent with paginated mode. Previously they were placed last.
+
+  Some builtin filters became more precise as part of this change:
+
+  - `EntityTagFilter` with multiple tags now requires all of them on the backend, matching its frontend behavior.
+  - `EntityUserFilter.starred` matches the full starred entity refs rather than just their names, and the starred count is computed by the backend.
+
+#### 3.2.4-next.1
+
+##### Patch Changes
+
+- [`c162b94`](https://github.com/backstage/backstage/commit/c162b94): Fixed the catalog entity list re-writing the URL on every render, which spammed `history.replaceState` and crashed Safari with a `SecurityError`. The URL is now only updated when it actually changes.
+
+#### 3.2.3
+
+##### Patch Changes
+
+- [`736d84e`](https://github.com/backstage/backstage/commit/736d84e): Use locale-insensitive Unicode casing for consistent string handling across environments.
+- [`a7b14b5`](https://github.com/backstage/backstage/commit/a7b14b5): Fixed `EntityOwnerPicker` crashing with `Entity reference "<name>" had missing or empty kind` when the `owners` query parameter contains humanized entity refs, as produced by the `OwnershipCard` links in `@backstage/plugin-org`.
+
+  Query parameters were stored as-is in the initial state and only converted to full entity refs by an effect, which runs after the first render. That first render passed the raw value to the entity presentation API, whose `parseEntityRef` call rejects a ref without a kind. The same raw value was also sent to `catalogApi.getEntitiesByRefs` on mount, and made the option checkboxes render unselected until the effect ran.
+
+  The query parameters are now normalized through `EntityOwnerFilter` when the state is initialized, matching what the existing effect already did and what the `filters` code path already produced.
+
+- [`bf7e890`](https://github.com/backstage/backstage/commit/bf7e890): Added the missing Material UI dependency used by catalog popovers.
+
+#### 3.2.3-next.1
+
+##### Patch Changes
+
+- [`bf7e890`](https://github.com/backstage/backstage/commit/bf7e890): Added the missing Material UI dependency used by catalog popovers.
+
+### `@backstage/plugin-scaffolder` (1.38.2 → [1.40.0-next.2](../../changelogs/@backstage/plugin-scaffolder.md#1400-next2))
+
+#### 1.40.0-next.2
+
+##### Minor Changes
+
+- [`d0cc453`](https://github.com/backstage/backstage/commit/d0cc453): Added a `Featured Templates` homepage widget that displays templates tagged with a configurable catalog tag, defaulting to `featured`.
 
 #### 1.39.0
 
@@ -2122,7 +2313,7 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`1a705ca`](https://github.com/backstage/backstage/commit/1a705ca): Added `templateDryRunPermission`, which allows permission policies to control who can submit inline Software Template dry runs.
 
-### `@backstage/plugin-scaffolder-react` (2.0.3 → [2.1.1-next.0](../../changelogs/@backstage/plugin-scaffolder-react.md#211-next0))
+### `@backstage/plugin-scaffolder-react` (2.0.3 → [2.1.1-next.1](../../changelogs/@backstage/plugin-scaffolder-react.md#211-next1))
 
 #### 2.1.0
 
@@ -2148,7 +2339,13 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`5ff93bf`](https://github.com/backstage/backstage/commit/5ff93bf): Added functionality to register a Template Outputs Component in the new frontend system.
 
-### `@backstage/plugin-techdocs` (1.18.0 → [1.19.0-next.1](../../changelogs/@backstage/plugin-techdocs.md#1190-next1))
+### `@backstage/plugin-techdocs` (1.18.0 → [1.19.0-next.2](../../changelogs/@backstage/plugin-techdocs.md#1190-next2))
+
+#### 1.19.0-next.2
+
+##### Patch Changes
+
+- [`6c74f3f`](https://github.com/backstage/backstage/commit/6c74f3f): Migrated the `TechDocsPicker` filter from the deprecated `getCatalogFilters` to `getCatalogQuery`.
 
 #### 1.19.0-next.1
 
@@ -2245,7 +2442,13 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 ## Other patch version bumps
 
-### `@backstage/backend-test-utils` (1.11.6 → [1.11.8-next.1](../../changelogs/@backstage/backend-test-utils.md#1118-next1))
+### `@backstage/backend-test-utils` (1.11.6 → [1.11.8-next.2](../../changelogs/@backstage/backend-test-utils.md#1118-next2))
+
+#### 1.11.8-next.2
+
+##### Patch Changes
+
+- [`f6054ac`](https://github.com/backstage/backstage/commit/f6054ac): Test backends now provide the default experimental connections service for plugins and modules that declare connection dependencies.
 
 #### 1.11.8-next.1
 
@@ -2265,7 +2468,26 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`05d03ee`](https://github.com/backstage/backstage/commit/05d03ee): Increased the test database cleanup timeout to 60 seconds to reduce timeout failures when using Docker.
 
-### `@backstage/catalog-client` (1.16.1 → [1.16.3-next.0](../../changelogs/@backstage/catalog-client.md#1163-next0))
+### `@backstage/catalog-client` (1.16.1 → [1.16.3-next.1](../../changelogs/@backstage/catalog-client.md#1163-next1))
+
+#### 1.16.3-next.1
+
+##### Patch Changes
+
+- [`6c74f3f`](https://github.com/backstage/backstage/commit/6c74f3f): Fixed the conversion of legacy filters that happens when a request has both a `filter` and a `query`, so that it matches the semantics of the legacy filter query parameter. Empty filters no longer turn into a predicate that matches nothing, empty records no longer match everything, and string values take precedence over `CATALOG_FILTER_EXISTS` for the same key.
+- [`aeb9393`](https://github.com/backstage/backstage/commit/aeb9393): The `InMemoryCatalogClient` test utility now matches entities the same way as the catalog backend. Both `filter` and `query` are evaluated against the same search rows that the backend builds for its search table, instead of `query` being evaluated against raw entity JSON. This affects `getEntities`, `getEntitiesByRefs`, `queryEntities`, `streamEntities`, and `getEntityFacets`.
+
+  This fixes several cases where the fake returned different results than a real catalog, which may change the outcome of existing tests:
+
+  - Relation shorthand such as `{ 'relations.hasMember': 'user:default/alice' }` now works in `query`, including with `$in`, `$hasPrefix`, `$exists`, `$contains`, and logical operators.
+  - Field keys are matched case-insensitively in both `filter` and `query`. For example, `{ 'spec.dependsOn': ... }` previously never matched in `filter`, and `{ 'METADATA.NAME': ... }` never matched in `query`.
+  - Entities without a `metadata.namespace` now match `{ 'metadata.namespace': 'default' }` in `query`.
+  - Values longer than 200 characters can no longer be matched by value, but still satisfy `$exists: true`, as in the backend.
+  - `metadata.name`, `metadata.namespace`, and `metadata.uid` always satisfy `$exists: true`, even when the entity has no value for them.
+  - Predicates that the backend does not support are now rejected up front with an `InputError`, even when no entities would be evaluated. For example, an object `$contains` on any field other than `relations`, or a `relations` `$contains` without a `type`.
+  - Entities that have keys differing only in casing, such as `spec.foo` and `spec.Foo`, now cause an `InputError` when matched, since the backend refuses to store such entities.
+
+- [`e844921`](https://github.com/backstage/backstage/commit/e844921): `streamEntities` no longer asks the catalog backend to compute the total number of matching items, since that count is never part of the streamed result. This also applies to the catalog service in `@backstage/plugin-catalog-node`, which delegates to the client. The `totalItems` option of `StreamEntitiesRequest` is now deprecated and ignored.
 
 #### 1.16.2
 
@@ -2303,7 +2525,7 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`1134d4b`](https://github.com/backstage/backstage/commit/1134d4b): Fixed reading a duration from configuration so that an all-zero ISO 8601 duration (such as `PT0S`) now yields a consistent zero value instead of an empty result.
 
-### `@backstage/core-app-api` (1.20.4 → [1.20.6-next.0](../../changelogs/@backstage/core-app-api.md#1206-next0))
+### `@backstage/core-app-api` (1.20.4 → [1.20.6-next.1](../../changelogs/@backstage/core-app-api.md#1206-next1))
 
 #### 1.20.5
 
@@ -2351,7 +2573,13 @@ verify-patches` to validate Yarn patch references, local patch files,
 - [`7150117`](https://github.com/backstage/backstage/commit/7150117): Updated internal Azure DevOps imports to avoid a circular module dependency.
 - [`e895def`](https://github.com/backstage/backstage/commit/e895def): Fixed handling of GitLab URLs for instances configured with a relative base path.
 
-### `@backstage/plugin-catalog` (2.0.8 → [2.0.10-next.2](../../changelogs/@backstage/plugin-catalog.md#2010-next2))
+### `@backstage/plugin-catalog` (2.0.8 → [2.0.10-next.3](../../changelogs/@backstage/plugin-catalog.md#2010-next3))
+
+#### 2.0.10-next.3
+
+##### Patch Changes
+
+- [`6c74f3f`](https://github.com/backstage/backstage/commit/6c74f3f): The catalog export button now respects filters that implement `getCatalogQuery`.
 
 #### 2.0.10-next.1
 
@@ -2386,34 +2614,7 @@ verify-patches` to validate Yarn patch references, local patch files,
 - [`e3781a3`](https://github.com/backstage/backstage/commit/e3781a3): Fixed circular dependency warnings when building the catalog plugin.
 - [`d421187`](https://github.com/backstage/backstage/commit/d421187): Reduced the initial app bundle size by loading page and optional UI implementations only when their extensions render.
 
-### `@backstage/plugin-catalog-react` (3.2.2 → [3.2.4-next.1](../../changelogs/@backstage/plugin-catalog-react.md#324-next1))
-
-#### 3.2.4-next.1
-
-##### Patch Changes
-
-- [`c162b94`](https://github.com/backstage/backstage/commit/c162b94): Fixed the catalog entity list re-writing the URL on every render, which spammed `history.replaceState` and crashed Safari with a `SecurityError`. The URL is now only updated when it actually changes.
-
-#### 3.2.3
-
-##### Patch Changes
-
-- [`736d84e`](https://github.com/backstage/backstage/commit/736d84e): Use locale-insensitive Unicode casing for consistent string handling across environments.
-- [`a7b14b5`](https://github.com/backstage/backstage/commit/a7b14b5): Fixed `EntityOwnerPicker` crashing with `Entity reference "<name>" had missing or empty kind` when the `owners` query parameter contains humanized entity refs, as produced by the `OwnershipCard` links in `@backstage/plugin-org`.
-
-  Query parameters were stored as-is in the initial state and only converted to full entity refs by an effect, which runs after the first render. That first render passed the raw value to the entity presentation API, whose `parseEntityRef` call rejects a ref without a kind. The same raw value was also sent to `catalogApi.getEntitiesByRefs` on mount, and made the option checkboxes render unselected until the effect ran.
-
-  The query parameters are now normalized through `EntityOwnerFilter` when the state is initialized, matching what the existing effect already did and what the `filters` code path already produced.
-
-- [`bf7e890`](https://github.com/backstage/backstage/commit/bf7e890): Added the missing Material UI dependency used by catalog popovers.
-
-#### 3.2.3-next.1
-
-##### Patch Changes
-
-- [`bf7e890`](https://github.com/backstage/backstage/commit/bf7e890): Added the missing Material UI dependency used by catalog popovers.
-
-### `@backstage/plugin-search` (1.7.7 → [1.7.9-next.0](../../changelogs/@backstage/plugin-search.md#179-next0))
+### `@backstage/plugin-search` (1.7.7 → [1.7.9-next.1](../../changelogs/@backstage/plugin-search.md#179-next1))
 
 #### 1.7.8
 
@@ -2449,7 +2650,7 @@ verify-patches` to validate Yarn patch references, local patch files,
 
 - [`736d84e`](https://github.com/backstage/backstage/commit/736d84e): Use locale-insensitive Unicode casing for consistent string handling across environments.
 
-### `@backstage/plugin-techdocs-addons-test-utils` (2.0.8 → [2.0.10-next.0](../../changelogs/@backstage/plugin-techdocs-addons-test-utils.md#2010-next0))
+### `@backstage/plugin-techdocs-addons-test-utils` (2.0.8 → [2.0.10-next.1](../../changelogs/@backstage/plugin-techdocs-addons-test-utils.md#2010-next1))
 
 #### 2.0.9
 
@@ -2519,15 +2720,15 @@ verify-patches` to validate Yarn patch references, local patch files,
 - `@backstage/cli-module-migrate` (0.2.1 → [0.2.2-next.1](../../changelogs/@backstage/cli-module-migrate.md#022-next1))
 - `@backstage/cli-module-translations` (0.1.4 → [0.1.5-next.0](../../changelogs/@backstage/cli-module-translations.md#015-next0))
 - `@backstage/config-loader` (1.11.2 → [1.11.4-next.0](../../changelogs/@backstage/config-loader.md#1114-next0))
-- `@backstage/core-compat-api` (0.5.14 → [0.5.16-next.0](../../changelogs/@backstage/core-compat-api.md#0516-next0))
+- `@backstage/core-compat-api` (0.5.14 → [0.5.16-next.1](../../changelogs/@backstage/core-compat-api.md#0516-next1))
 - `@backstage/core-plugin-api` (1.12.9 → [1.12.11-next.0](../../changelogs/@backstage/core-plugin-api.md#11211-next0))
-- `@backstage/dev-utils` (1.1.26 → [1.1.28-next.0](../../changelogs/@backstage/dev-utils.md#1128-next0))
+- `@backstage/dev-utils` (1.1.26 → [1.1.28-next.1](../../changelogs/@backstage/dev-utils.md#1128-next1))
 - `@backstage/frontend-defaults` (0.5.5 → [0.5.7-next.0](../../changelogs/@backstage/frontend-defaults.md#057-next0))
-- `@backstage/frontend-dev-utils` (0.1.5 → [0.1.7-next.0](../../changelogs/@backstage/frontend-dev-utils.md#017-next0))
+- `@backstage/frontend-dev-utils` (0.1.5 → [0.1.7-next.1](../../changelogs/@backstage/frontend-dev-utils.md#017-next1))
 - `@backstage/integration-aws-node` (0.2.1 → [0.2.3-next.0](../../changelogs/@backstage/integration-aws-node.md#023-next0))
 - `@backstage/integration-react` (1.2.21 → [1.2.23-next.0](../../changelogs/@backstage/integration-react.md#1223-next0))
 - `@backstage/plugin-app-node` (0.1.48 → [0.1.50-next.1](../../changelogs/@backstage/plugin-app-node.md#0150-next1))
-- `@backstage/plugin-auth` (0.1.11 → [0.1.13-next.0](../../changelogs/@backstage/plugin-auth.md#0113-next0))
+- `@backstage/plugin-auth` (0.1.11 → [0.1.13-next.1](../../changelogs/@backstage/plugin-auth.md#0113-next1))
 - `@backstage/plugin-auth-backend-module-atlassian-provider` (0.4.18 → [0.4.20-next.1](../../changelogs/@backstage/plugin-auth-backend-module-atlassian-provider.md#0420-next1))
 - `@backstage/plugin-auth-backend-module-auth0-provider` (0.4.4 → [0.4.6-next.1](../../changelogs/@backstage/plugin-auth-backend-module-auth0-provider.md#046-next1))
 - `@backstage/plugin-auth-backend-module-aws-alb-provider` (0.4.19 → [0.4.21-next.1](../../changelogs/@backstage/plugin-auth-backend-module-aws-alb-provider.md#0421-next1))
@@ -2571,9 +2772,9 @@ verify-patches` to validate Yarn patch references, local patch files,
 - `@backstage/plugin-events-backend-test-utils` (0.1.58 → [0.1.60-next.0](../../changelogs/@backstage/plugin-events-backend-test-utils.md#0160-next0))
 - `@backstage/plugin-events-node` (0.4.25 → [0.4.27-next.1](../../changelogs/@backstage/plugin-events-node.md#0427-next1))
 - `@backstage/plugin-gateway-backend` (1.1.8 → [1.1.10-next.1](../../changelogs/@backstage/plugin-gateway-backend.md#1110-next1))
-- `@backstage/plugin-kubernetes-cluster` (0.0.40 → [0.0.42-next.0](../../changelogs/@backstage/plugin-kubernetes-cluster.md#0042-next0))
+- `@backstage/plugin-kubernetes-cluster` (0.0.40 → [0.0.42-next.1](../../changelogs/@backstage/plugin-kubernetes-cluster.md#0042-next1))
 - `@backstage/plugin-notifications-common` (0.2.3 → [0.2.5-next.0](../../changelogs/@backstage/plugin-notifications-common.md#025-next0))
-- `@backstage/plugin-org-react` (0.1.53 → [0.1.55-next.0](../../changelogs/@backstage/plugin-org-react.md#0155-next0))
+- `@backstage/plugin-org-react` (0.1.53 → [0.1.55-next.1](../../changelogs/@backstage/plugin-org-react.md#0155-next1))
 - `@backstage/plugin-permission-backend` (0.7.15 → [0.7.17-next.1](../../changelogs/@backstage/plugin-permission-backend.md#0717-next1))
 - `@backstage/plugin-permission-backend-module-allow-all-policy` (0.2.22 → [0.2.24-next.1](../../changelogs/@backstage/plugin-permission-backend-module-allow-all-policy.md#0224-next1))
 - `@backstage/plugin-permission-common` (0.9.10 → [0.9.12-next.0](../../changelogs/@backstage/plugin-permission-common.md#0912-next0))
